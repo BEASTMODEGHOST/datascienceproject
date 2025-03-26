@@ -1,0 +1,186 @@
+[2025-03-26 00:50:10,444 : INFO : 62910521 : reading yaml file from config\config.yaml]
+[2025-03-26 01:10:05,312 : INFO : main : >>>> stage Data ingestion Stage started <<<<<]
+[2025-03-26 01:10:05,315 : INFO : common : reading yaml file from config\config.yaml]
+[2025-03-26 01:10:05,343 : INFO : common : reading yaml file from params.yaml]
+[2025-03-26 01:10:05,345 : INFO : common : reading yaml file from schema.yaml]
+[2025-03-26 01:10:05,345 : ERROR : main : "'ConfigBox' object has no attribute 'artifacts_root'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'artifacts_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifacts_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'artifacts_root'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'artifacts_root'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\MLOPS\datascienceproject\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\MLOPS\datascienceproject\src\datascience\pipeline\data_ingestion_pipeline.py", line 11, in initiate_data_ingestion
+    config=configurationManager()
+  File "D:\MLOPS\datascienceproject\src\datascience\config\configurations.py", line 11, in __init__
+    create_directories([self.config.artifacts_root])
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'artifacts_root'"
+[2025-03-26 01:11:42,181 : INFO : main : >>>> stage Data ingestion Stage started <<<<<]
+[2025-03-26 01:11:42,183 : INFO : common : reading yaml file from config\config.yaml]
+[2025-03-26 01:11:42,183 : INFO : common : reading yaml file from params.yaml]
+[2025-03-26 01:11:42,184 : INFO : common : reading yaml file from schema.yaml]
+[2025-03-26 01:11:42,184 : INFO : common : created directory at: artifacts]
+[2025-03-26 01:11:42,193 : INFO : common : created directory at: artifaacts/data_ingestion]
+[2025-03-26 01:11:43,362 : ERROR : main : [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "D:\MLOPS\datascienceproject\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\MLOPS\datascienceproject\src\datascience\pipeline\data_ingestion_pipeline.py", line 14, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "D:\MLOPS\datascienceproject\src\datascience\components\data_ingestion.py", line 14, in download_file
+    filename,headers=request.urlretrieve(url=self.config.source_URL,filename=self.config.local_data_file)
+  File "D:\MLOPS\datascienceproject\venv\lib\urllib\request.py", line 251, in urlretrieve
+    tfp = open(filename, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2025-03-26 15:04:41,695 : INFO : main : >>>> stage Data ingestion Stage started <<<<<]
+[2025-03-26 15:04:41,702 : INFO : configurations : reading yaml file from config\config.yaml]
+[2025-03-26 15:04:41,709 : INFO : configurations : reading yaml file from params.yaml]
+[2025-03-26 15:04:41,711 : INFO : configurations : reading yaml file from schema.yaml]
+[2025-03-26 15:04:41,712 : INFO : configurations : created directory at: artifacts]
+[2025-03-26 15:04:41,713 : INFO : configurations : created directory at: artifaacts/data_ingestion]
+[2025-03-26 15:04:43,224 : ERROR : main : [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "D:\MLOPS\datascienceproject\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\MLOPS\datascienceproject\src\datascience\pipeline\data_ingestion_pipeline.py", line 14, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "D:\MLOPS\datascienceproject\src\datascience\components\data_ingestion.py", line 14, in download_file
+    filename,headers=request.urlretrieve(url=self.config.source_URL,filename=self.config.local_data_file)
+  File "D:\MLOPS\datascienceproject\venv\lib\urllib\request.py", line 251, in urlretrieve
+    tfp = open(filename, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2025-03-26 15:20:58,310 : INFO : main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-03-26 15:20:58,324 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2025-03-26 15:20:58,344 : INFO : common : yaml file: params.yaml loaded successfully]
+[2025-03-26 15:20:58,345 : INFO : common : yaml file: schema.yaml loaded successfully]
+[2025-03-26 15:20:58,345 : INFO : common : created directory at: artifacts]
+[2025-03-26 15:20:58,346 : INFO : common : created directory at: artifacts/data_ingestion]
+[2025-03-26 15:20:59,593 : INFO : data_ingestion : artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: AD94:2A016E:168D1:21320:67E3CA32
+Accept-Ranges: bytes
+Date: Wed, 26 Mar 2025 09:50:59 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4745-BOM
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1742982659.375530,VS0,VE263
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 3259e88101c4a8081c71c5a6170c7262755e2bf7
+Expires: Wed, 26 Mar 2025 09:55:59 GMT
+Source-Age: 0
+
+]
+[2025-03-26 15:20:59,638 : INFO : main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-03-26 15:21:13,197 : INFO : main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-03-26 15:21:13,199 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2025-03-26 15:21:13,199 : INFO : common : yaml file: params.yaml loaded successfully]
+[2025-03-26 15:21:13,200 : INFO : common : yaml file: schema.yaml loaded successfully]
+[2025-03-26 15:21:13,200 : INFO : common : created directory at: artifacts]
+[2025-03-26 15:21:13,201 : INFO : common : created directory at: artifacts/data_ingestion]
+[2025-03-26 15:21:13,571 : INFO : data_ingestion : artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: AD94:2A016E:168D1:21320:67E3CA32
+Accept-Ranges: bytes
+Date: Wed, 26 Mar 2025 09:51:13 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4736-BOM
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1742982674.640673,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 5d25c83198234bcf1928222f970a75fd20af01b3
+Expires: Wed, 26 Mar 2025 09:56:13 GMT
+Source-Age: 14
+
+]
+[2025-03-26 15:21:13,590 : INFO : main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-03-26 16:08:26,558 : INFO : main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-03-26 16:08:26,570 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2025-03-26 16:08:26,577 : INFO : common : yaml file: params.yaml loaded successfully]
+[2025-03-26 16:08:26,585 : INFO : common : yaml file: schema.yaml loaded successfully]
+[2025-03-26 16:08:26,586 : INFO : common : created directory at: artifacts]
+[2025-03-26 16:08:26,587 : INFO : common : created directory at: artifacts/data_ingestion]
+[2025-03-26 16:08:26,587 : INFO : data_ingestion : File already exists]
+[2025-03-26 16:08:26,654 : INFO : main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-03-26 16:08:26,654 : INFO : main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-03-26 16:08:26,655 : INFO : common : yaml file: config\config.yaml loaded successfully]
+[2025-03-26 16:08:26,656 : INFO : common : yaml file: params.yaml loaded successfully]
+[2025-03-26 16:08:26,658 : INFO : common : yaml file: schema.yaml loaded successfully]
+[2025-03-26 16:08:26,658 : INFO : common : created directory at: artifacts]
+[2025-03-26 16:08:26,659 : INFO : common : created directory at: artifacts/data_validation]
+[2025-03-26 16:08:26,687 : INFO : main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
